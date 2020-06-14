@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Gregor Boltic Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="hover_image.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body style="background-color:#E0E7E9">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h1 class="w3-padding-64"><b>Gregor<br>Boltic</b></h1>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a> 
+    <a href="#my_work" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">My Work</a> 
+    <a href="#other_projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Other Projects</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue-grey w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue-grey w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Gregor Boltic</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:420px;margin-right:120px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="home">
+    <h1 class="w3-jumbo" style="color:#354649"><b>Welcome to my website</b></h1>
+  </div>
+    <!-- About -->
+  <div class="w3-container" id="about" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color:#354649"><b>About.</b></h1>
+    <hr style="width:50px;border:5px solid #A3C6C4" class="w3-round">
+    <p><h4>With education in Urban Planning and Design I grew to appreciate the power of data and application of data analysis in geospatial context. Realising this, I pursued my career and 
+      professional develepoment path as a Technical Project Officer for one of the British charities, working mostly, but not exclusively with GIS. To complement my technical skills, and
+      and ability to perform complex data analysis, I recently started learning how to program. I posses basic working knowledge of Python, HTML and CSS. </h4>
+    </p>
+  </div>
+  <!-- My Work -->
+  <div class="w3-container" id="my_work" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color:#354649"><b>My work.</b></h1>
+    <hr style="width:50px;border:5px solid #A3C6C4" class="w3-round">
+    <p></p>
+    <p><h4>Below is a combination of projects I've created as part of my studies, my job or as a personal side project. I utilised my skills in range of different software, such as GIS, Adobe 
+      Creative Suite (Illustrator, Photoshop, Indesign), AutoCAD, Python, HTML and Grasshopper.    
+    </h4></p>
+  </div>
+  
+
+  <!-- Images LEFT row -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <!-- IMG 01-->
+      <div class="container">
+      <img src="thumbnails\image01.png" style="width:100%" class="image">
+        <div class="overlay" onclick="onClick('modal1')">
+          <div class="text"><b>University Portfolio</b><br><br> 
+            Projects I created during my time at the university, studying Urban Planning and Design. 
+          </div>
+        </div>
+      </div>
+      <!-- IMG 02-->
+      <div class="container">
+      <img src="thumbnails\image02.png" style="width:100%" class="image">
+        <div class="overlay" onclick="onClick('modal2')">
+          <div class="text"><b>GIS Maps</b><br><br> 
+          Few GIS maps utilising origin-destination data and OS Highways dataset.</div>
+        </div>
+      </div>
+
+    </div>
+  <!-- Images RIGHT row -->
+    <div class="w3-half">
+      <!-- IMG 03-->
+      <div class="container">
+      <img src="thumbnails\image03.png" style="width:100%" class="image">
+      <a href="https://sustrans-uk.maps.arcgis.com/apps/webappviewer/index.html?id=bf9f6eb706d843f3b136ab45a3d47894" target="_blank"><div class="overlay">
+          <div class="text"><b>Cardiff North - Interactive public enagagement map</b><br><br> 
+          A public facing interactive map for public engagement purposes as a response to COVID-19. 
+          Map is built with ESRI's web app builder and connected to Survey123. Results of each survey are linked to the section of the route users want to comment.</div>
+        </div></a>
+      </div>
+      <!-- IMG 04-->
+      <div class="container">
+      <img src="thumbnails\image04.png" style="width:100%" class="image">
+      <a href="https://sustrans-uk.maps.arcgis.com/apps/webappviewer/index.html?id=d6fce69ebbf346fea2c5b27b9260fb0b" target="_blank"><div class="overlay">
+          <div class="text"><b>Penarth Active Travel Map</b><br><br>
+          Interactive map is targeted to primary and secondary school pupils, so 
+          I completely changed it's styling making it looks more playful and interesting for children. </div>
+          </div></a>
+        </div>
+      </div>
+  </div>    
+
+  <!-- MODAL 1 -->
+  <div id="modal1" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <!-- Content -->
+      <embed src="portfolio\Portfolio_GB.pdf" frameborder="0" width="100%" height="800">
+      <p id="caption"></p>
+    </div>
+  </div>
+  
+  <!-- MODAL 2 -->
+  <div id="modal2" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <!-- Content -->
+      <embed src="GIS maps\maps_combined.pdf" frameborder="0" width="100%" height="800">
+      <p id="caption"></p>
+    </div>
+  </div>
+  
+  <!-- MODAL FOR IMAGE SHOW 
+  <div id="modal2" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      Content
+      <img src="GIS maps\FINAL NEWPORT11.png" style="width: 100%">
+      <p id="caption"></p>
+    </div>
+  </div> -->
+
+  <!-- Other Projects -->
+  <div class="w3-container" id="other_projects" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color:#354649"><b>Other Projects.</b></h1>
+    <hr style="width:50px;border:5px solid #A3C6C4" class="w3-round">
+    <p> <h4>Not directly connected to GIS, this is a short project I created with Python and openCV library. I used MobileNet SSD algorithm to detect the objects in the video.
+      Currently, the algorithm only detects objects while object count and tracking will be added soon. </h4><br><br><br></p>
+      <div class="w3-half">
+        <div class="w3-row-padding">
+          <video style="width:100%" class="image" controls>
+          <source src="video\object_detection.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+          </video>
+        </div>
+      </div>
+      <div class="w3-half">
+      <div class="w3-row-padding">
+        <p style="width:100%">
+          <br>
+          The idea behind the project was to create a tool that may be used to monitor travel behaviour on the sections of road where temporary space reallocation measures were 
+          intoduced due to COVID 19. After running the algorithm, it would be possible to perform further analysis, for example monitoring number of trips made by different transport 
+          mode and finding corelations between pre and post COVID travel behaviour.   
+        </p>
+      </div>
+      </div>
+    </div>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color:#354649"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid #A3C6C4" class="w3-round">
+    <h4>
+    <p>If you want to get in touch with me, the best way would be via e-mail, although phone and LinkedIn are both fine as well.<br><br><br><br>
+    <b>Email: </b>gregor.boltic@gmail.com<br><br>
+    <b>Phone: </b>+44 7597514245<br><br>
+    <b>LinkedIn: </b><a href="https://www.linkedin.com/in/gregor-bolti%C4%8D-9ab9b8157/" target="_blank">Gregor Boltic</a><br><br><br><br><br><br><br><br><br><br><br><br>
+    </p></h4>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  //document.getElementById("img01").src = element.src;
+  document.getElementById(element).style.display = "block";
+  var captionText = document.getElementById("caption");
+  //captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
